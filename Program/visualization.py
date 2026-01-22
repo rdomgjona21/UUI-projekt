@@ -2,13 +2,7 @@ import matplotlib.pyplot as plt
 
 
 def plot_model_comparison(results, save_path=None):
-    """
-    Prikazuje usporedbu MAE i RMSE za sve modele.
 
-    results = {
-        "Model name": {"MAE": value, "RMSE": value}
-    }
-    """
     models = list(results.keys())
     mae_values = [results[m]["MAE"] for m in models]
     rmse_values = [results[m]["RMSE"] for m in models]

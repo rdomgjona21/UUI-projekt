@@ -4,9 +4,6 @@ from sklearn.ensemble import GradientBoostingRegressor
 
 
 def get_models():
-    """
-    Vraća rječnik ML modela koji se koriste u radu.
-    """
     models = {
         "Linear Regression": LinearRegression(),
         "kNN": KNeighborsRegressor(n_neighbors=5),
