@@ -1,8 +1,5 @@
 \documentclass[12pt,a4paper]{article}
 
-% -----------------------------
-% PAKETI
-% -----------------------------
 \usepackage[croatian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -23,9 +20,6 @@
     urlcolor=blue
 }
 
-% -----------------------------
-% NASLOV
-% -----------------------------
 \title{
 Primjena nadziranog strojnog učenja za povećanje energetske učinkovitosti
 }
@@ -38,16 +32,10 @@ Fakultet organizacije i informatike
 
 \date{\today}
 
-% -----------------------------
-% DOKUMENT
-% -----------------------------
 \begin{document}
 
 \maketitle
 
-% -----------------------------
-% UVOD
-% -----------------------------
 \section{Uvod}
 U ovom radu razmatra se primjena algoritama nadziranog strojnog učenja u svrhu povećanja energetske učinkovitosti i smanjenja negativnog utjecaja na okoliš. Poseban naglasak stavljen je na predviđanje potrošnje i proizvodnje električne energije u sustavima s obnovljivim izvorima energije.
 
@@ -107,9 +95,6 @@ Gradient Boosting je algoritam strojnog učenja koji gradi prediktivni model pos
 Ono što Gradient Boosting algoritam u stvari radi jest da iterativno smanjuje funkcija gubtika(eng. loss function).To se događa na ovaj način.
 U početku započinjemo sa početnim modelom,najčesće stablom odlučivanja,čije su početne predikcije nasumice generirane.Nakon toga računamo rezidualnu grešku,razliku između stvarne i predviđene vrijednosti te potom provodimo postupak regularizacije.Postupak regularizacije uključuje smanjivanje utjecaja svakog novog slabog modela koji se dodaje skupu modela,ona se provodi kako bi spriječili prenaučenosti modela(eng. overfitting) odnosno kako se model ne bi previše prilagodio podacima.Nakon regularizacije treniramo sljedeći tako da su rezidualne pogreške iz prethodnog koraka ciljne vrijednosti za treniranje novog modela.U ovoj fazi procjenjuje se učinkovitost ažuriranog skupa, uključujući novonaučeni model, najčešće korištenjem zasebnog testnog skupa podataka. Ako su rezultati na tom skupu zadovoljavajući, novi slabi model dodaje se skupu; u suprotnom može biti potrebno prilagoditi hiperparametre modela.Ovaj proces se iterativno ponavlja dok nije ostvaren kriterij kojeg definiramo u početku,kao što je dosezanje maksimalnog broja iteracija,postizanje željene točnosti ili ako dodatne iteracije više ne donose značajno poboljšanje.\cite{ibm-gb}
 
-% -----------------------------
-% PODACI I PRETPROCESIRANJE
-% -----------------------------
 \section{Podaci i pretprocesiranje}
 
 \subsection{Opis skupa podataka}
@@ -150,9 +135,6 @@ U kontekstu predviđanja energetske potrošnje, pravilna podjela skupa podataka 
 Pouzdana generalizacija modela omogućuje preciznije planiranje proizvodnje i potrošnje energije, što smanjuje potrebu za sigurnosnim rezervama i doprinosi povećanju energetske učinkovitosti te smanjenju negativnog utjecaja na okoliš.
 
 
-% -----------------------------
-% IMPLEMENTACIJA
-% -----------------------------
 \section{Implementacija aplikacije}
 
 
@@ -197,9 +179,6 @@ Radi lakše interpretacije i usporedbe modela, implementiran je modul \texttt{vi
 
 Grafički prikazi dodatno olakšavaju analizu performansi modela i omogućuju vizualnu potvrdu zaključaka dobivenih numeričkom evaluacijom. Svi grafovi automatski se spremaju u zasebni direktorij.
 
-% -----------------------------
-% REZULTATI
-% -----------------------------
 \section{Rezultati i analiza}
 
 Na grafu usporedbe pogreške predikcije prikazane su vrijednosti srednje apsolutne pogreške (MAE) i korijena srednje kvadratne pogreške (RMSE) za sva tri modela.
@@ -246,10 +225,6 @@ Analiza važnosti značajki pokazala je da model ne promatra meteorološke i vre
 
 Zaključno, dobiveni rezultati jasno pokazuju da povećanje energetske učinkovitosti ne proizlazi isključivo iz tehnoloških poboljšanja infrastrukture, već i iz kvalitetnog korištenja podataka i analitičkih metoda. Primjena algoritama nadziranog strojnog učenja omogućuje preciznije predviđanje potrošnje energije, smanjenje neizvjesnosti u planiranju te izbjegavanje naglih vršnih opterećenja. Posljedično se smanjuje potreba za hitnim uključivanjem fosilnih izvora energije, čime se doprinosi smanjenju emisija stakleničkih plinova i negativnog utjecaja na okoliš.
 
-
-% -----------------------------
-% LITERATURA
-% -----------------------------
 \begin{thebibliography}{99}
 
 \bibitem{ref1}
@@ -305,5 +280,5 @@ IBM Think, online članak.
 Dostupno: \url{https://www.ibm.com/think/topics/gradient-boosting},
 pristupljeno: 20.~siječnja~2026.
 \end{thebibliography}
-
+ChatGPT je korišten za kreaciju kostura rada te za pretvaranje web-članaka u IEEE referencu. 
 \end{document}
