@@ -28,9 +28,6 @@ def plot_model_comparison(results, save_path=None):
 
 
 def plot_feature_importance(df, save_path=None):
-    """
-    Prikazuje važnost značajki (Gradient Boosting).
-    """
     plt.figure(figsize=(8, 5))
     plt.barh(df["Feature"], df["Importance"])
     plt.xlabel("Važnost")
@@ -46,9 +43,6 @@ def plot_feature_importance(df, save_path=None):
 
 
 def plot_predictions(y_test, y_pred, model_name, save_path=None):
-    """
-    Scatter graf: stvarne vs. predviđene vrijednosti.
-    """
     plt.figure(figsize=(5, 5))
     plt.scatter(y_test, y_pred, alpha=0.5)
     plt.xlabel("Stvarna vrijednost")
